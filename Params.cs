@@ -143,6 +143,7 @@ namespace timing
                 FileSystemEventHandler fsw_callback = (object sender, FileSystemEventArgs fsea) =>
                 {
                     // this.lbl_time_for_this_task.Invoke((MethodInvoker)delegate { lbl_time_for_this_task.Text = w.name; });
+                    Work.current_working?.TriggerEndWork();
                     w.TriggerStartWork();
                 };
 
